@@ -1,8 +1,8 @@
 # Finance RESTWebService
 
- Here I have developed an **own RESTfull service for Finance** using **Java, SpringMVC and AngularJS**
+ Here I have developed an **Finance Service** using **Java, SpringMVC, RESTfull service and AngularJS**
   
- Here various calculations like **Annual Payment Rate(APR), Least Monthly Payment, Loan Monthly Payment and  Loan Number   Payment** were implemented. 
+ Here services like **Annual Payment Rate(APR), Least Monthly Payment, Loan Monthly Payment and  Loan Number of Payment** were implemented. 
  
 ##### Annual Payment Rate(APR):
 * Loan Amount (C)
