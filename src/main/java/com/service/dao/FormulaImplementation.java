@@ -10,7 +10,7 @@ import com.service.model.LoanNumberPayment;
 @Repository
 public class FormulaImplementation implements FormulaMethod {
 
-	public double annualPaymentRate1(AnnualPaymentRate apr) {
+	public double annualPaymentRate(AnnualPaymentRate apr) {
 		// TODO Auto-generated method stub
 		double rate = apr.getInterestRate() / 1200;
 		double value = Math.pow((1 + rate), apr.getMonths());

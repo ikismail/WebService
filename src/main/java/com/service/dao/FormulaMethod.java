@@ -7,7 +7,7 @@ import com.service.model.LoanNumberPayment;
 
 public interface FormulaMethod {
 
-	double annualPaymentRate1(AnnualPaymentRate apr);
+	double annualPaymentRate(AnnualPaymentRate apr);
 
 	double leastMonthlyPayment(LeastMonthlyPayment lmp);
 

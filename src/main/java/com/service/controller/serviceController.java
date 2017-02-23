@@ -20,13 +20,15 @@ public class serviceController {
 	@Autowired
 	private FormulaMethod formulaMethod;
 
+	// gets loanAmount,extraCost,interestRate and months from the client
+	// and return the object in Json format
+
 	@RequestMapping(value = "/APR/", method = RequestMethod.POST)
 	public ResponseEntity<?> calculateAPR(@RequestBody AnnualPaymentRate apr) {
 		System.out.println("Starting APR Calculations");
-		double value = formulaMethod.annualPaymentRate1(apr);
+		double value = formulaMethod.annualPaymentRate(apr);
 		apr.setValue(value);
 		return new ResponseEntity<AnnualPaymentRate>(apr, HttpStatus.OK);
-
 	}
 
 	@RequestMapping(value = "/LeastMonthlyPayment/", method = RequestMethod.POST)
@@ -46,7 +48,7 @@ public class serviceController {
 		return new ResponseEntity<LoanMonthlyPayment>(lmp, HttpStatus.OK);
 
 	}
-	
+
 	@RequestMapping(value = "/LoanNumberPayment/", method = RequestMethod.POST)
 	public ResponseEntity<?> calculateLoanNP(@RequestBody LoanNumberPayment lnp) {
 		System.out.println("Starting LoanNP Calculations");
